@@ -1,0 +1,230 @@
+[
+  {
+    "model": "product.store",
+    "pk": 1,
+    "fields": {
+      "date_created": "2022-08-11T13:24:51Z",
+      "name": "House of davina",
+      "full_address": "Full address goes here",
+      "lga": "Karu",
+      "state": "Nasarawa",
+      "country": "Nigeria",
+      "owner": [1]
+    }
+  },
+  {
+    "model": "product.preview",
+    "pk": 1,
+    "fields": {
+      "thumb_1": "gp.jpg",
+      "thumb_2": "6219626_WSuvXIw.png",
+      "thumb_3": "6219626_QPUiKOE.png",
+      "thumb_4": "6219626_LX2HIcu.png"
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 1,
+    "fields": { "name": "Fashion", "parent": null }
+  },
+  {
+    "model": "product.category",
+    "pk": 2,
+    "fields": { "name": "Men clothing", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 3,
+    "fields": { "name": "Women clothing", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 4,
+    "fields": { "name": "Unisex", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 5,
+    "fields": { "name": "Cosmetics", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 6,
+    "fields": { "name": "Accessories", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 7,
+    "fields": { "name": "Luggage", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 8,
+    "fields": { "name": "Blanket", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 9,
+    "fields": { "name": "Eyelash", "parent": 1 }
+  },
+  {
+    "model": "product.category",
+    "pk": 10,
+    "fields": { "name": "Sportwear", "parent": 4 }
+  },
+  {
+    "model": "product.category",
+    "pk": 11,
+    "fields": { "name": "Belts knuckle", "parent": 2 }
+  },
+  {
+    "model": "product.category",
+    "pk": 12,
+    "fields": { "name": "Electronics", "parent": null }
+  },
+  {
+    "model": "product.category",
+    "pk": 13,
+    "fields": { "name": "Speaker", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 14,
+    "fields": { "name": "Video Camera", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 15,
+    "fields": { "name": "Radio", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 16,
+    "fields": { "name": "Head phone", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 17,
+    "fields": { "name": "Cable", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 18,
+    "fields": { "name": "Electric cooker", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 19,
+    "fields": { "name": "Oven", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 20,
+    "fields": { "name": "Iron", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 21,
+    "fields": { "name": "Microwave", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 22,
+    "fields": { "name": "Fans", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 23,
+    "fields": { "name": "Video player", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 24,
+    "fields": { "name": "Extention box", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 25,
+    "fields": { "name": "Television", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 26,
+    "fields": { "name": "Microphone", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 27,
+    "fields": { "name": "Bulb", "parent": 12 }
+  },
+  {
+    "model": "product.category",
+    "pk": 28,
+    "fields": { "name": "Circuit and component", "parent": 12 }
+  },
+  {
+    "model": "product.product",
+    "pk": 1,
+    "fields": {
+      "name": "Packing Shirt",
+      "description": "the description goes here",
+      "price": 100,
+      "store": 1,
+      "image": 1,
+      "percent": 0,
+      "in_stock": true,
+      "date_added": "2022-08-11T13:34:17Z",
+      "category": 4
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 2,
+    "fields": {
+      "name": "American men suit",
+      "description": "This is the description here",
+      "price": 10000,
+      "store": 1,
+      "image": 1,
+      "percent": 0,
+      "in_stock": true,
+      "date_added": "2022-08-12T02:39:30Z",
+      "category": 2
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 3,
+    "fields": {
+      "name": "Petal Oil",
+      "description": "This is a petal oil for beard",
+      "price": 1200,
+      "store": 1,
+      "image": 1,
+      "percent": 0,
+      "in_stock": true,
+      "date_added": "2022-08-12T02:40:37Z",
+      "category": 5
+    }
+  },
+  {
+    "model": "product.order",
+    "pk": 15,
+    "fields": {
+      "owner": 1,
+      "product": 1,
+      "quantity": 3,
+      "date_added": "2022-08-26"
+    }
+  },
+  {
+    "model": "product.orderitem",
+    "pk": 3,
+    "fields": {
+      "ref_id": "",
+      "owner": 1,
+      "date_add": "2022-08-26",
+      "items": [15]
+    }
+  }
+]
