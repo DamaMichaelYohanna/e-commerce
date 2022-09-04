@@ -33,3 +33,15 @@ def product_category(request,):
 def view_cart(request):
     context = {}
     return render(request, 'main/cart.html', context=context)
+
+
+def about_us():
+    return None
+
+
+def contact_us():
+    return None
+
+
+def faq():
+    return None
