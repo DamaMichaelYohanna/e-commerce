@@ -18,30 +18,13 @@ def quickview(request):
     return render(request, 'main/quickView.html', )
 
 
-def product_category(request,):
-    """View to display the different category of product as requested"""
-    category = request.GET.get('category')
-    if category == 'fashion':
-        detail = Product.objects.all()
-        print(detail)
-    elif category == 'sport':
-        pass
-    elif category == 'electronic':
-        pass
+def about_us(request):
+    return render(request, 'main/about.html')
 
 
-def view_cart(request):
-    context = {}
-    return render(request, 'main/cart.html', context=context)
+def contact_us(request):
+    return render(request, 'main/contact.html')
 
 
-def about_us():
-    return None
-
-
-def contact_us():
-    return None
-
-
-def faq():
-    return None
+def faq(request):
+    return render(request, 'main/faq.html')
