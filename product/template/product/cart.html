@@ -1,63 +1,7 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <!-- molla/cart.html  22 Nov 2019 09:55:06 GMT -->
-  <head>
-    {% include "main/links_header.html" %}
-  </head>
-
-  <body>
+{% extends 'main/base_one.html' %}
+{% block title %} Horizon Online Shopping | Cart {% endblock %} {% load static %}
+{% block content %}
     <div class="page-wrapper">
-      <header class="header">
-        <div class="header-top">
-          <div class="container">
-            <div class="header-left">
-              <div class="header" style="margin: 6%;">
-                <a href="/">
-                  <img src="{% static 'main/images/horizon0.png' %}" width="105px" alt="Horizon"> 
-                </a>
-              </div>
-              <!-- End .header-dropdown -->
-            </div>
-            <!-- End .header-left -->
-
-            <div class="header-right">
-              <ul class="top-menu">
-                <li>
-                  <a href="#">Links</a>
-                  <ul>
-                    <li>
-                      <a href="tel:#"
-                        ><i class="icon-phone"></i>Call: +2348160535033</a
-                      >
-                    </li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li>
-                        {% if user.is_authenticated %}
-                        <a href="/accounts/profile" data-toggle="modal">
-                          <i class="icon-user"></i> 
-                          {{user.get_full_name}} 
-                        </a> | <a href="/accounts/logout">Logout</a>
-                        {%else%} 
-                        <a href="#signin-modal" data-toggle="modal">
-                          <i class="icon-user"></i>Login</a>
-                         {% endif %}
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <!-- End .top-menu -->
-            </div>
-            <!-- End .header-right -->
-          </div>
-          <!-- End .container -->
-        </div>
-        <!-- End .header-top -->
-      </header>
-      <!-- End .header -->
-
       <main class="main">
         <div
           class="page-header text-center"
@@ -85,7 +29,7 @@
 
         <div class="page-content">
           <div class="cart">
-            {% if cart_item %}
+            {% if cart_items %}
             <div class="container">
               <div class="row">
                 <div class="col-lg-9">
@@ -101,7 +45,7 @@
                     </thead>
 
                     <tbody>
-                      {% for item in cart_item %}
+                      {% for item in cart_items %}
                       <tr>
                         <td class="product-col">
                           <div class="product">
@@ -324,3 +268,5 @@
         <!-- End .page-content -->
       </main>
       <!-- End .main -->
+
+      {% endblock %}

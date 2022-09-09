@@ -83,7 +83,7 @@ def view_cart(request):
         cart_item_list = None
         cart_item_price = 0
 
-    context = {'cart_item': cart_item_list, 'cart_item_price': cart_item_price}
+    context = {'cart_items': cart_item_list, 'cart_item_price': cart_item_price}
     return render(request, 'product/cart.html', context=context)
 
 

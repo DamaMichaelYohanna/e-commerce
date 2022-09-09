@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   {% include 'main/links_header.html' %}
-</head>
-
-<body>
+{% extends 'main/base_one.html' %}
+{% block title %} Horizon Online Shopping | Category {% endblock %} {% load static %}
+{% block content %}
     <div class="page-wrapper">
-
         <main class="main">
         	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
         		<div class="container">
@@ -659,21 +653,4 @@
         </div><!-- End .modal-dialog -->
     </div><!-- End .modal -->
 
-    <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/wNumb.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/nouislider.min.js"></script>
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-</body>
-
-
-<!-- molla/category.html  22 Nov 2019 10:02:52 GMT -->
-</html>
+{% endblock %}

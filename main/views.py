@@ -14,6 +14,17 @@ def index(request):
     return render(request, 'main/home.html', context)
 
 
+def search(request):
+    search_key = request.GET.get("search")
+    category = request.GET.get("category")
+    if search_key and category:  # if both search key and category are available
+        pass
+    elif search_key:  # only search key without category
+        pass
+    else:
+        pass
+
+
 def quickview(request):
     return render(request, 'main/quickView.html', )
 
