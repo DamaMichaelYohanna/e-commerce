@@ -14,11 +14,12 @@ def product():
 def product_category(request, category_keyword):
     """View to display the different category of product as requested"""
     # category_keyword = request.GET.get('category')
-    category = Category.objects.get(name=category_keyword).children.all()
-    print(category)
-    products = Product.objects.filter(category__in=category)
+    parent_category = Category.objects.get(name=category_keyword)
+    children_category = parent_category.children.all()
+    # full_category = child_category.append(parent_category)
+    products = Product.objects.filter(category__parent=parent_category)
     print(products)
-    context = {'products': products, 'category': category}
+    context = {'products': products, 'category': children_category}
     return render(request, 'product/category.html', context)
 
 

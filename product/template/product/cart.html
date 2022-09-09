@@ -3,17 +3,7 @@
 {% block content %}
     <div class="page-wrapper">
       <main class="main">
-        <div
-          class="page-header text-center"
-          style="background-image: url('assets/images/page-header-bg.jpg')"
-        >
-          <div class="container">
-            <h1 class="page-title">Shopping Cart<span>Shop</span></h1>
-          </div>
-          <!-- End .container -->
-        </div>
-        <!-- End .page-header -->
-        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
           <div class="container">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -26,6 +16,21 @@
           <!-- End .container -->
         </nav>
         <!-- End .breadcrumb-nav -->
+        <div class="container">
+          <div
+            class="page-header page-header-big text-center"
+            style="
+              background-image: url('{% static 'main/images/about-header-bg.jpg' %}');
+            "
+          >
+            <h1 class="page-title text-white">
+              Shopping Cart<span class="text-white"></span>
+            </h1>
+          </div>
+          <!-- End .page-header -->
+        </div>
+        <!-- End .container -->
+        
 
         <div class="page-content">
           <div class="cart">
