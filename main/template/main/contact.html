@@ -77,7 +77,7 @@ About {% endblock %} {% block content %} {% load static %}
                     </li>
                     <li>
                       <i class="icon-calendar"></i>
-                      <span class="text-dark">Sunday</span> <br />11am-6pm ET
+                      <span class="text-dark">Sunday</span> <br />12pm-6pm WAT
                     </li>
                   </ul>
                   <!-- End .contact-list -->
@@ -96,7 +96,11 @@ About {% endblock %} {% block content %} {% load static %}
               Use the form below to get in touch with the sales team
             </p>
 
-            <form action="#" class="contact-form mb-3">
+            <form
+              action="/contact/message"
+              class="contact-form mb-3"
+              method="POST"
+            >
               <div class="row">
                 <div class="col-sm-6">
                   <label for="cname" class="sr-only">Name</label>
@@ -195,15 +199,15 @@ About {% endblock %} {% block content %} {% load static %}
                   <!-- End .col-xl-6 -->
                   <div class="col-sm-7 col-xl-6">
                     <div class="store-content">
-                      <h3 class="store-title">Wall Street Plaza</h3>
+                      <h3 class="store-title">Eco Plaza</h3>
                       <!-- End .store-title -->
-                      <address>88 Pine St, New York, NY 10005, USA</address>
+                      <address>12 Avenue Eco Suit, Lagos, Nigeria</address>
                       <div><a href="tel:#">+1 987-876-6543</a></div>
 
                       <h4 class="store-subtitle">Store Hours:</h4>
                       <!-- End .store-subtitle -->
-                      <div>Monday - Saturday 11am to 7pm</div>
-                      <div>Sunday 11am to 6pm</div>
+                      <div>Monday - Saturday 8am to 6pm</div>
+                      <div>Sunday 12pm to 6pm</div>
 
                       <a href="#" class="btn btn-link" target="_blank"
                         ><span>View Map</span
@@ -236,14 +240,16 @@ About {% endblock %} {% block content %} {% load static %}
 
                   <div class="col-sm-7 col-xl-6">
                     <div class="store-content">
-                      <h3 class="store-title">One New York Plaza</h3>
+                      <h3 class="store-title">Kaduna Branch</h3>
                       <!-- End .store-title -->
-                      <address>88 Pine St, New York, NY 10005, USA</address>
-                      <div><a href="tel:#">+1 987-876-6543</a></div>
+                      <address>
+                        Refinary Junction, Kaduna Central, Kaduna, Lagos
+                      </address>
+                      <div><a href="tel:#">+2349130084460</a></div>
 
                       <h4 class="store-subtitle">Store Hours:</h4>
                       <!-- End .store-subtitle -->
-                      <div>Monday - Friday 9am to 8pm</div>
+                      <div>Monday - Friday 9am to 6pm</div>
                       <div>Saturday - 9am to 2pm</div>
                       <div>Sunday - Closed</div>
 
