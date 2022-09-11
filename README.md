@@ -8,4 +8,4 @@ To get the project running, open up your terminal or cmd window in your project 
 below command based on your operating system.
 for windows - python manage.py runserver
 
-for linux/unix - python3 manage.py runserver
+for linux/unix - python3 manage.py runserver.
