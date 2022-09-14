@@ -16,10 +16,9 @@ def product_category(request, category_keyword):
     # category_keyword = request.GET.get('category')
     parent_category = Category.objects.get(name=category_keyword)
     children_category = parent_category.children.all()
-    # full_category = child_category.append(parent_category)
     products_on_parent_obj = Product.objects.filter(category=parent_category)
     products_on_child_obj = Product.objects.filter(category__parent=parent_category)
-    print(products_on_child_obj.values() )
+    all_product = products_on_child_obj + products_on_parent_obj
     context = {'products': products_on_child_obj, 'category': children_category}
     return render(request, 'product/category.html', context)
 
