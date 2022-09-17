@@ -130,36 +130,35 @@
                   <a href="#" class="search-toggle" role="button"
                     ><i class="icon-search"></i
                   ></a>
-                  <form action="#" method="get">
+                  <form action="{% url 'main:home' %}" method="get">
                     <div class="header-search-wrapper search-wrapper-wide">
                       <div class="select-custom">
-                        <select id="cat" name="cat">
+                        <select id="cat" name="category">
                           <option value="">All Departments</option>
-                          <option value="1">Fashion</option>
-                          <option value="2">- Accessories</option>
-                          <option value="3">- Men</option>
-                          <option value="4">- Jewellery</option>
-                          <option value="5">- Kids Fashion</option>
-                          <option value="6">Electronics</option>
-                          <option value="7">- Smart TVs</option>
-                          <option value="8">- Cameras</option>
-                          <option value="9">- Games</option>
-                          <option value="10">Home &amp; Garden</option>
-                          <option value="11">Motors</option>
-                          <option value="12">- Cars and Trucks</option>
-                          <option value="15">- Boats</option>
-                          <option value="16">
-                            - Auto Tools &amp; Supplies
+                          <option value="Fashion">Fashion</option>
+                          <option value="Accessories">- Accessories</option>
+                          <option value="Men clothing">- Men clothing</option>
+                          <option value="Women clothing">- Women clothing</option>
+                          <option value="Kid Fashion">- Kids Fashion</option>
+                          <option value="Electronics">Electronics</option>
+                          <option value="Smart tv">- Smart TVs</option>
+                          <option value="Camera">- Cameras</option>
+                          <option value="Laptop">- Laptop</option>
+                          <option value="Sport">Sports &amp; Outdoor</option>
+                          <option value="Phone">Phones</option>
+                          <option value="Iphone">- Iphone and Tabs</option>
+                          <option value="Andriod">- Andriods</option>
+                          <option value="B-phone">- Button phone
                           </option>
                         </select>
                       </div>
                       <!-- End .select-custom -->
-                      <label for="q" class="sr-only">Search</label>
+                      <label for="keyword" class="sr-only">Search</label>
                       <input
                         type="search"
                         class="form-control"
-                        name="q"
-                        id="q"
+                        name="keyword"
+                        id="keyword"
                         placeholder="Search product ..."
                         required
                       />
@@ -297,10 +296,10 @@
                                       <!-- End .menu-title -->
                                       <ul>
                                         <li>
-                                          <a href="#">Desktop Computers</a>
+                                          <a href="{% url 'product:category' category_keyword='Desktop' %}">Desktop Computers</a>
                                         </li>
-                                        <li><a href="#">Monitors</a></li>
-                                        <li><a href="#">Laptops</a></li>
+                                        <li><a href="{% url 'product:category' category_keyword='Monitor' %}">Monitors</a></li>
+                                        <li><a href="{% url 'product:category' category_keyword='Laptop' %}">Laptops</a></li>
                                         <li><a href="#">iPad & Tablets</a></li>
                                         <li>
                                           <a href="#">Hard Drives & Storage</a>
