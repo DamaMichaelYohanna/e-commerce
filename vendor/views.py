@@ -1,3 +1,17 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def add_product(request):
+    pass
+
+
+def update_product(request):
+    pass
+
+
+def delete_product(request):
+    pass
+
+
+def dashboard(request):
+    pass
