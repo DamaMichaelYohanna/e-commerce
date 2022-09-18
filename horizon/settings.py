@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'main',
     'product',
     'sales',
+    'vendor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,7 +60,8 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR, 'account', 'template'),
                  os.path.join(BASE_DIR, 'main', 'template'),
                  os.path.join(BASE_DIR, 'product', 'template'),
-                 os.path.join(BASE_DIR, 'sales', 'template')],
+                 os.path.join(BASE_DIR, 'sales', 'template'),
+                 os.path.join(BASE_DIR, 'vendor', 'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
