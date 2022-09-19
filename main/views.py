@@ -33,14 +33,16 @@ def index(request):
 
 
 def search(request):
+    """Search functionality"""
     search_key = request.GET.get("search")
-    category = request.GET.get("category")
-    if search_key and category:  # if both search key and category are available
-        pass
+    category_keyword = request.GET.get("category")
+    if search_key and category_keyword:  # if both search key and category are available
+        category = Category.objects.get(name=category_keyword)
+        product = Product.objects.filter(category=category, name__icontains=search_key)
     elif search_key:  # only search key without category
-        pass
-    else:
-        pass
+        product = Product.objects.filter(name__icontains=search_key)
+
+    render(request, 'main/search.html', {'product': product})
 
 
 def quickview(request):
