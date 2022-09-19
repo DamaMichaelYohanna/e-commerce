@@ -6,7 +6,7 @@ app_name = 'product'
 urlpatterns = [
     path('', views.product, name='home'),
     path('category/<str:category_keyword>', views.product_category, name='category'),
-    path('quickview/<int:pk>', views.quickview, name="quick view"),
+    path('quickview/<int:pk>', views.quickview, name="quick_view"),
     # cart related urls
     path('cart', views.view_cart, name='cart'),
     path('cart/<int:pk>/add/', views.add_to_cart, name='add_to_cart'),
