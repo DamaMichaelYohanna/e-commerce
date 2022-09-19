@@ -108,6 +108,11 @@
                           >Forgot Your Password?</a
                         >
                       </div>
+                      <input
+                        type="hidden"
+                        name="next"
+                        value="{{request.GET.next}}"
+                      />
                       <!-- End .form-footer -->
                     </form>
                     <div class="form-choice">

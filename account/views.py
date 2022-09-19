@@ -13,10 +13,14 @@ def login_view(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
         user = authenticate(request, username=email, password=password)
-        if user:
+        if user and user.is_active:
             login(request, user=user)
             messages.success(request, 'Login successful')
-            return redirect(reverse_lazy("account:dashboard"))
+            next_url = request.POST.get('next', None)  # grab next param or None
+            if next_url:
+                return redirect(next_url)  # redirect to next param
+
+            return redirect(reverse_lazy("main:home"))  # else redirect to home
         else:
             return render(request, 'account/login.html', {'err': True})
 
@@ -27,7 +31,7 @@ def login_view(request):
 def logout_view(request):
     """log out view"""
     logout(request)
-    redirect(reverse_lazy("main:home"))
+    return redirect(reverse_lazy("main:home"))
 
 
 def customer_register(request):

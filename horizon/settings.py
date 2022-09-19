@@ -136,5 +136,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'account.User'
 
 
+# login urls
+LOGIN_URL = '/account/login'
+
 # add additional context processors here
 TEMPLATES[0]['OPTIONS']['context_processors'].append('product.context_processor.cart_context_processor')
