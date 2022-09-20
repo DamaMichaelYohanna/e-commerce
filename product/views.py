@@ -14,10 +14,20 @@ def product():
 def product_category(request, category_keyword):
     """View to display the different category of product as requested"""
     # category_keyword = request.GET.get('category')
-    parent_category = Category.objects.get(name=category_keyword)
-    children_category = parent_category.children.all()
-    products_on_parent_obj = Product.objects.filter(category=parent_category)
-    products_on_child_obj = Product.objects.filter(category__parent=parent_category)
+    try:
+        parent_category = Category.objects.get(name=category_keyword)
+        children_category = parent_category.children.all()
+        products_on_parent_obj = Product.objects.filter(category=parent_category)
+        products_on_child_obj = Product.objects.filter(category__parent=parent_category)
+    except Category.DoesNotExist:
+        parent_category = None
+    except AttributeError:
+        pass
+    finally:
+        products_on_parent_obj = Product.objects.filter(category=parent_category)
+        products_on_child_obj = Product.objects.filter(category__parent=parent_category)
+
+
     # all_product = products_on_child_obj + products_on_parent_obj
     context = {'products': products_on_child_obj,
                'other_products': products_on_parent_obj,
