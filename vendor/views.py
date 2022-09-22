@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
-from product.models import Category, Product, Preview
+from product.models import Category, Product, Preview, Store
 from vendor.forms import ProductForm, ProductImage
 
 
@@ -61,8 +61,21 @@ def update_product(request, pk):
 
 
 @login_required
-def delete_product(request):
-    pass
+def delete_product(request, pk):
+    try:
+        product = Product.objects.get(pk=pk)
+    except Product.DoesNotExist:
+        product = None
+    if request.method == "POST":
+        user = request.user
+        store = Store.objects.get(name=product.store)
+        print(store)
+        if user in store.owner.all():
+            print("ready to go")
+        else:
+            print("problem dey oh")
+    return render(request, 'vendor/delete_product.html')
+
 
 
 @login_required
