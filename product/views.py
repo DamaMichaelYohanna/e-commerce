@@ -20,18 +20,17 @@ def product_category(request, category_keyword):
         products_on_parent_obj = Product.objects.filter(category=parent_category)
         products_on_child_obj = Product.objects.filter(category__parent=parent_category)
     except Category.DoesNotExist:
-        parent_category = None
-    except AttributeError:
-        pass
+        products_on_child_obj = None
+        products_on_parent_obj = None
+        children_category = None
     finally:
-        products_on_parent_obj = Product.objects.filter(category=parent_category)
-        products_on_child_obj = Product.objects.filter(category__parent=parent_category)
-
+        more_products = Product.objects.all()
 
     # all_product = products_on_child_obj + products_on_parent_obj
     context = {'products': products_on_child_obj,
                'other_products': products_on_parent_obj,
-               'category': children_category}
+               'category': children_category,
+               'more':more_products}
     return render(request, 'product/category.html', context)
 
 
