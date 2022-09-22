@@ -77,7 +77,9 @@ def delete_product(request, pk):
     return render(request, 'vendor/delete_product.html')
 
 
-
 @login_required
 def dashboard(request):
-    pass
+    store = Store.objects.get(owner=request.user)
+    products = Product.objects.filter(store=store)
+    context = {'product': products, 'store': store}
+    return render(request, 'vendor/dashboard.html', context)
