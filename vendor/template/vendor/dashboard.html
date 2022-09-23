@@ -7,6 +7,8 @@
     <title>Vendor | Dashboard</title>
   </head>
   <body>
-    <div class="container-fluid">{{store}} {{product}}</div>
+    <div class="container-fluid">
+      {{store}} {% for product in product %} {{product}} {% endfor %}
+    </div>
   </body>
 </html>
