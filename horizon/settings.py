@@ -34,12 +34,18 @@ INSTALLED_APPS = [
     'product',
     'sales',
     'vendor',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # external libraries
+    'sorl.thumbnail',
+    'newsletter',
+
 ]
 
 MIDDLEWARE = [
@@ -141,3 +147,6 @@ LOGIN_URL = '/account/login'
 
 # add additional context processors here
 TEMPLATES[0]['OPTIONS']['context_processors'].append('product.context_processor.cart_context_processor')
+
+NEWSLETTER_THUMBNAIL = 'sorl-thumbnail'
+SITE_ID = 1
