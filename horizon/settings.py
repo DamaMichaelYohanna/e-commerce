@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     # external libraries
     'sorl.thumbnail',
-    'newsletter',
+    # 'newsletter',
 
 ]
 
